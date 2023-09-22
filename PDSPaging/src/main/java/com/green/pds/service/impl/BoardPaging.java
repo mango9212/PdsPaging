@@ -25,10 +25,16 @@ public class BoardPaging {
 	public PdsPagingVo getPdsPagingInfo() {
 		
 		PdsPagingVo  vo             =  new PdsPagingVo();
-
+		
+		// 한 페이지 보여줄  :  ??
+		// 전체 자료수 : totalcount
+		// 총 페이지 수 : totalpagecount
 		int          totalpagecount = 
 				(int) Math.ceil( (double) totalcount / (double) pagecount );
-
+		
+		// paging.jsp 에서 사용할 페이지 번호 목록의 시작번호 :  pagestartnum
+		// paging.jsp 에서 사용할 페이지 번호 목록의 끝번호   :  pageendnum
+		
 		int          pagestartnum   =  (nowpage-1)  /  pagetotalcount * pagetotalcount + 1;
 		int          pageendnum     =  ((nowpage-1) /  pagetotalcount + 1) * pagetotalcount;		
 		if( pageendnum > totalpagecount  )
