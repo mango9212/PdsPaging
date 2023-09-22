@@ -113,8 +113,8 @@ public class PdsController {
 		String        menuname  =  menuService.getMenuName(menu_id);
 		map.put("menuname", menuname);
 		
-		// idx 없으면 null
-		//     있으면 숫자 27 
+		// idx 없으면 null     : 새글
+		//     있으면 숫자 27  : 답글
 		int      idx    = 0;
 		PdsVo    pdsVo  = null;
 		if( map.get("idx") != null  ) {
